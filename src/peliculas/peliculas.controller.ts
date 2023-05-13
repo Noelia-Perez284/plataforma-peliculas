@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, ParseUUIDPipe, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpStatus, NotFoundException, Param, ParseUUIDPipe, Post, Put } from '@nestjs/common';
 import { PeliculasService } from './peliculas.service';
 import { get } from 'http';
 import { Pelicula } from './peliculas';
@@ -20,7 +20,17 @@ export class PeliculasController {
 
     @Delete(':id')
     deletePelicula(@Param('id',ParseUUIDPipe)id:string){
-        return this.peliculasService.deletePelicula(id);
+        try {
+            let result= this.peliculasService.deletePelicula(id);
+            if(result){
+                return { message: 'Se elimino la pelicula correctamente' };
+            }else{
+                throw new NotFoundException('No se encontró el id de esa pelicula');
+            }
+        } catch (error) {
+            throw new NotFoundException('ocurrio un error al eliminar la pelicula');
+        }
+        return 
     }
 
     @Post()
@@ -29,8 +39,18 @@ export class PeliculasController {
     }
 
     @Put(':id')
-    putPelicula(@Body()pelicula: PeliculaDto, @Param('id') id: string) : string{
-        return this.peliculasService.updatePelicula(pelicula,id);
+    putPelicula(@Body()pelicula: PeliculaDto, @Param('id', ParseUUIDPipe) id: string) {
+       try {
+        let resultUpdate= this.peliculasService.updatePelicula(pelicula,id);
+        if(resultUpdate){
+            return { message: 'Se actualizo la pelicula correctamente' };
+        }
+        else {
+            throw new NotFoundException('No se encontró el id de esa pelicula');
+        }
+       } catch (error) {
+        throw new NotFoundException('ocurrio un error al obtener la pelicula');
+       } 
     }
 
 }

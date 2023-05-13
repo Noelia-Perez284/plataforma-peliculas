@@ -1,5 +1,6 @@
-
-6616b06c-ba82-4ddd-be18-a69189a0c576,Gladiador,sandra ,drama ,Historia real,765,1997
-326d270b-0b02-4155-bf1c-630041b0874d,titanic,leonardo ,drama ,Historia real,765,1992
-e4631f55-bd12-4be6-a08e-12fe3e93a44b,la vida es bella,leonardo ,drama ,Historia real,765,1987
-a549f131-0850-4d7b-8030-8639a296b54a,trasformer,dick ,drama ,Historia real,765,frrv
+9fddd093-fa99-447b-87bd-aec4128ea1d6,Milagro inesperado,darin,accion ,mundos paralelos,234,212
+7f2bba26-a230-46be-b574-8b0abe41f001,relatos Salvajes,darin,accion ,mundos ireal,24,212
+c996d886-0b95-4ca4-9b02-aa48debabd52,la vida es bella,adriana/ santiago,accion ,mundos ireal,24,1987
+eef99b98-6604-4dc8-be81-6a38b631873b,trasformer,guikkerno,accion ,mundos ireal,24,2012
+620deb40-cad9-4612-bee7-20e70e4a9ef1,hombres de honor,willy,accion ,historia real,24,2002
+58ecaf36-a28b-4956-ac81-a5f24233593b,hombres de honor,willy,accion ,historia real,24,2002
